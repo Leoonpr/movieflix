@@ -10,6 +10,5 @@ import br.com.movieflix.entity.Movie;
 
 @Repository
 public interface MovieRepository extends JpaRepository <Movie, Long>{
-
     List<Movie> findMovieByCategories(List<Category> categories);
 }
