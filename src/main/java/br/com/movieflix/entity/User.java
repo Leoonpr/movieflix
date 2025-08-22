@@ -38,7 +38,7 @@ public String password;
 
     @Override
     public String getUsername() {
-        return "";
+        return email;
     }
 
     @Override

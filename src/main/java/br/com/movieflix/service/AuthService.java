@@ -13,6 +13,7 @@ public class AuthService implements UserDetailsService {
     private final UserRepository repository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return repository.findUserByEmail(username).orElseThrow(() -> new UsernameNotFoundException("Usuário ou senha errado"));
+        return repository.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("Usuário ou senha errado"));
+
     }
 }
